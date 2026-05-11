@@ -1,0 +1,7 @@
+{
+  "server_url": "http://localhost:3000",
+  "update_interval": 2,
+  "node_id": null,
+  "retry_attempts": 3,
+  "log_level": "INFO"
+}

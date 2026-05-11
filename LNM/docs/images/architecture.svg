@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
+  <style>
+    .box { fill:#e6f2ff; stroke:#333; stroke-width:1.5 }
+    .abox { fill:#f7f9fb; stroke:#333; stroke-width:1.2 }
+    .fbox { fill:#fff3e6; stroke:#333; stroke-width:1.2 }
+    .txt { font-family: Arial, sans-serif; font-size:14px; fill:#111 }
+    .title { font-weight: bold; font-size:16px }
+    .arrow { stroke:#333; stroke-width:2; fill:none; marker-end: url(#arrowhead) }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Agents -->
+  <rect x="40" y="40" width="220" height="90" class="abox" rx="8"/>
+  <text x="150" y="62" class="txt title" text-anchor="middle">Agents</text>
+  <text x="150" y="86" class="txt" text-anchor="middle">Python agent(s)</text>
+  <text x="150" y="104" class="txt" text-anchor="middle">metric collection, /api/update</text>
+
+  <!-- Backend -->
+  <rect x="320" y="20" width="300" height="140" class="box" rx="8"/>
+  <text x="470" y="44" class="txt title" text-anchor="middle">Backend</text>
+  <text x="470" y="68" class="txt" text-anchor="middle">Node.js + Express + Socket.IO</text>
+  <text x="470" y="92" class="txt" text-anchor="middle">In-memory `nodesMap`, `connections`</text>
+  <text x="470" y="112" class="txt" text-anchor="middle">REST APIs & real-time events</text>
+
+  <!-- Frontend -->
+  <rect x="660" y="40" width="200" height="90" class="fbox" rx="8"/>
+  <text x="760" y="62" class="txt title" text-anchor="middle">Frontend</text>
+  <text x="760" y="86" class="txt" text-anchor="middle">Three.js (WebGL) client</text>
+  <text x="760" y="104" class="txt" text-anchor="middle">Socket.IO realtime</text>
+
+  <!-- Scanner/DB -->
+  <rect x="360" y="180" width="160" height="70" class="abox" rx="8"/>
+  <text x="440" y="202" class="txt title" text-anchor="middle">Scanner</text>
+  <text x="440" y="222" class="txt" text-anchor="middle">C++ addon / JS fallback</text>
+
+  <rect x="540" y="180" width="160" height="70" class="abox" rx="8"/>
+  <text x="620" y="202" class="txt title" text-anchor="middle">Storage</text>
+  <text x="620" y="222" class="txt" text-anchor="middle">(Future) Redis / Postgres</text>
+
+  <!-- Arrows -->
+  <path d="M260 85 L320 85" class="arrow" />
+  <path d="M620 110 L660 110" class="arrow" />
+  <path d="M470 160 L470 180" class="arrow" />
+  <path d="M510 215 L540 215" class="arrow" />
+
+  <!-- Labels -->
+  <text x="290" y="70" class="txt">POST /api/update</text>
+  <text x="640" y="98" class="txt" text-anchor="end">Socket.IO</text>
+
+  <!-- Title -->
+  <text x="20" y="310" class="txt">Architecture diagram (simplified)</text>
+</svg>

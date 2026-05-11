@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveNetViz 3D - Real-Time Network Visualization</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>LiveNetViz 3D</h1>
+        <div class="header-stats">
+            <div class="stat">
+                <span class="stat-label">Nodes</span>
+                <span class="stat-value" id="nodeCount">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Healthy</span>
+                <span class="stat-value stat-healthy" id="healthyCount">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Warning</span>
+                <span class="stat-value stat-warning" id="warningCount">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Down</span>
+                <span class="stat-value stat-down" id="downCount">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main 3D Canvas -->
+    <div id="canvas-container">
+        <canvas id="scene"></canvas>
+    </div>
+
+    <!-- Controls Panel -->
+    <div class="controls-panel">
+        <h3>Controls</h3>
+        <button id="autoRotateBtn" class="btn">Auto Rotate: OFF</button>
+        <button id="resetViewBtn" class="btn">Reset View</button>
+        <button id="scanNetworkBtn" class="btn btn-primary">Scan Network</button>
+        <button id="autoDiscoverBtn" class="btn">Auto Discover Topology</button>
+        
+        <div class="control-group">
+            <h4>View Options</h4>
+            <label>
+                <input type="checkbox" id="showLabels" checked>
+                Show Labels
+            </label>
+            <label>
+                <input type="checkbox" id="showConnections" checked>
+                Show Connections
+            </label>
+            <label>
+                <input type="checkbox" id="showTraffic" checked>
+                Animate Traffic
+            </label>
+        </div>
+
+        <div class="control-group">
+            <h4>Layout</h4>
+            <select id="layoutSelect" class="select">
+                <option value="sphere">Sphere</option>
+                <option value="grid">Grid</option>
+                <option value="ring">Ring</option>
+                <option value="random">Random</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Node Details Panel -->
+    <div class="details-panel" id="detailsPanel">
+        <div class="panel-header">
+            <h3>Node Details</h3>
+            <button class="close-btn" id="closeDetailsBtn">&times;</button>
+        </div>
+        <div class="panel-content" id="detailsContent">
+            <p>Click on a node to view details</p>
+        </div>
+    </div>
+
+    <!-- Connection Status -->
+    <div class="connection-status" id="connectionStatus">
+        <span class="status-indicator"></span>
+        <span class="status-text">Connecting...</span>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Notifications -->
+    <div class="notifications" id="notifications"></div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

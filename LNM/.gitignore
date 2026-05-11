@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+
+# Build outputs
+dist/
+build/
+*.o
+*.so
+*.dll
+*.exe
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Redis dumps
+dump.rdb
+
+# Testing
+coverage/
+.nyc_output/
+
+# Config files with secrets
+config.local.json

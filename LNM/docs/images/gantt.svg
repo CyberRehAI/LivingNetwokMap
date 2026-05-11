@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260">
+  <style>
+    .txt { font-family: Arial, sans-serif; font-size:13px; fill:#111 }
+    .bar { fill:#6aa84f }
+    .bar2 { fill:#3d85c6 }
+    .bar3 { fill:#f6b26b }
+    .axis { stroke:#999; stroke-width:1 }
+  </style>
+
+  <!-- Title -->
+  <text x="20" y="24" class="txt" style="font-weight:bold; font-size:16px">Project Gantt (high-level)</text>
+
+  <!-- Time axis labels -->
+  <g class="txt">
+    <text x="200" y="50">Nov</text>
+    <text x="300" y="50">Dec</text>
+    <text x="380" y="50">Jan</text>
+    <text x="460" y="50">Feb</text>
+    <text x="540" y="50">Mar</text>
+    <text x="620" y="50">Apr</text>
+    <text x="700" y="50">May</text>
+  </g>
+
+  <!-- Bars -->
+  <text x="20" y="90" class="txt">Phase-1 (planning)</text>
+  <rect x="180" y="75" width="320" height="24" class="bar2" rx="4"/>
+
+  <text x="20" y="140" class="txt">Phase-2 (current - partial impl)</text>
+  <rect x="300" y="125" width="260" height="24" class="bar" rx="4"/>
+
+  <text x="20" y="190" class="txt">Phase-3 (remaining)</text>
+  <rect x="560" y="175" width="220" height="24" class="bar3" rx="4"/>
+
+  <!-- Legend -->
+  <rect x="720" y="80" width="14" height="14" fill="#3d85c6"/>
+  <text x="740" y="92" class="txt">Phase-1 completed</text>
+  <rect x="720" y="100" width="14" height="14" fill="#6aa84f"/>
+  <text x="740" y="112" class="txt">Phase-2 partial (this report)</text>
+  <rect x="720" y="120" width="14" height="14" fill="#f6b26b"/>
+  <text x="740" y="132" class="txt">Phase-3 planned</text>
+
+  <text x="20" y="240" class="txt">Note: Dates are illustrative; adjust to your project schedule before submission.</text>
+</svg>

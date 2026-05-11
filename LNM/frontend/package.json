@@ -1,0 +1,21 @@
+{
+  "name": "livenetviz-frontend",
+  "version": "1.0.0",
+  "description": "LiveNetViz 3D Frontend - Interactive 3D Network Visualization",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "three": "^0.159.0",
+    "socket.io-client": "^4.6.1",
+    "chart.js": "^4.4.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@vitejs/plugin-basic-ssl": "^1.0.1"
+  }
+}
